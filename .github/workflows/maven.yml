@@ -12,9 +12,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Switch Directory
-        run: cd MathResearch2019
       - name: Build with Maven
-        run: mvn -B package --file pom.xml
+        run: cd MathResearch2019; mvn -B package --file pom.xml
       - name: Test with Maven
-        run: mvn clean test
+        run: cd MathResearch2019; mvn clean test
