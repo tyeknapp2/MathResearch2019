@@ -1,4 +1,4 @@
-# MathResearch2019-Workspace
+# MathResearch2019
 
 MathResearch Restructured
 
