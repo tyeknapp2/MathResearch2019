@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: MathResearch2019.Tests.ReconfigurationGraphTest
 -------------------------------------------------------------------------------
-Tests run: 1677, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.355 s - in MathResearch2019.Tests.ReconfigurationGraphTest
+Tests run: 1677, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.088 s - in MathResearch2019.Tests.ReconfigurationGraphTest
