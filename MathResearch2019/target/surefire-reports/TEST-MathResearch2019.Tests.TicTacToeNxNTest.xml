@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="MathResearch2019.Tests.TicTacToeNxNTest" time="0.015" tests="3" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="13"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/TyeKnappenberger/MathResearch2019-Workspace/MathResearch2019/target/test-classes:/Users/TyeKnappenberger/MathResearch2019-Workspace/MathResearch2019/target/classes:/Users/TyeKnappenberger/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/TyeKnappenberger/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.2/junit-jupiter-api-5.5.2.jar:/Users/TyeKnappenberger/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/TyeKnappenberger/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/TyeKnappenberger/.m2/repository/org/junit/platform/junit-platform-commons/1.5.2/junit-platform-commons-1.5.2.jar:/Users/TyeKnappenberger/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.2/junit-jupiter-params-5.5.2.jar:/Users/TyeKnappenberger/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/TyeKnappenberger/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/TyeKnappenberger/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.2/junit-jupiter-engine-5.5.2.jar:/Users/TyeKnappenberger/.m2/repository/org/junit/platform/junit-platform-engine/1.5.2/junit-platform-engine-1.5.2.jar:/Users/TyeKnappenberger/.m2/repository/org/junit/vintage/junit-vintage-engine/5.5.2/junit-vintage-engine-5.5.2.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="13"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/openjdk-13.0.1.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/TyeKnappenberger/MathResearch2019-Workspace/MathResearch2019/target/surefire/surefirebooter15373035280408584894.jar /Users/TyeKnappenberger/MathResearch2019-Workspace/MathResearch2019/target/surefire 2019-11-19T22-58-33_302-jvmRun1 surefire17029642518594312894tmp surefire_012158552359363733499tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/TyeKnappenberger/MathResearch2019-Workspace/MathResearch2019/target/test-classes:/Users/TyeKnappenberger/MathResearch2019-Workspace/MathResearch2019/target/classes:/Users/TyeKnappenberger/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/TyeKnappenberger/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.2/junit-jupiter-api-5.5.2.jar:/Users/TyeKnappenberger/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/TyeKnappenberger/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/TyeKnappenberger/.m2/repository/org/junit/platform/junit-platform-commons/1.5.2/junit-platform-commons-1.5.2.jar:/Users/TyeKnappenberger/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.2/junit-jupiter-params-5.5.2.jar:/Users/TyeKnappenberger/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/TyeKnappenberger/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/TyeKnappenberger/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.2/junit-jupiter-engine-5.5.2.jar:/Users/TyeKnappenberger/.m2/repository/org/junit/platform/junit-platform-engine/1.5.2/junit-platform-engine-1.5.2.jar:/Users/TyeKnappenberger/.m2/repository/org/junit/vintage/junit-vintage-engine/5.5.2/junit-vintage-engine-5.5.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/TyeKnappenberger"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2019-10-15"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/openjdk-13.0.1.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/TyeKnappenberger/MathResearch2019-Workspace/MathResearch2019"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/Users/TyeKnappenberger/MathResearch2019-Workspace/MathResearch2019/target/surefire/surefirebooter15373035280408584894.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="13.0.1+9"/>
+    <property name="user.name" value="TyeKnappenberger"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.15.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/TyeKnappenberger/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/rh/kp1nn80x76b97n2c1t7wgdhw0000gn/T/"/>
+    <property name="java.version" value="13.0.1"/>
+    <property name="user.dir" value="/Users/TyeKnappenberger/MathResearch2019-Workspace/MathResearch2019"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.library.path" value="/Users/TyeKnappenberger/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="13.0.1+9"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="57.0"/>
+  </properties>
+  <testcase name="testPossibleMovesQuick{String, int}[1]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[2]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[3]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[4]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[5]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[6]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[7]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[8]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[9]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[10]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[11]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[12]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[13]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[14]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[15]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[16]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[17]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[18]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[19]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[20]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[21]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[22]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[23]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[24]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[25]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[26]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[27]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[28]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[29]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[30]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[31]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[32]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[33]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[34]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[35]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[36]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[37]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[38]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[39]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[40]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[41]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[42]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[43]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[44]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[45]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[46]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[47]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[48]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[49]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[50]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[51]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[52]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[53]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[54]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[55]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[56]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[57]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[58]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[59]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[60]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[61]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[62]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[63]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[64]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[65]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[66]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[67]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[68]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[69]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[70]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[71]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[72]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[73]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[74]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[75]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[76]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[77]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[78]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[79]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[80]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[81]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[82]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[83]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[84]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[85]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[86]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[87]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[88]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[89]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[90]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[91]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[92]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[93]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[94]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[95]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[96]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[97]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[98]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[99]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[100]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[101]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[102]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[103]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[104]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[105]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[106]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[107]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[108]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[109]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[110]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[111]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[112]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[113]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[114]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[115]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[116]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[117]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[118]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[119]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[120]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[121]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[122]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.005"/>
+  <testcase name="testPossibleMovesQuick{String, int}[123]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.002"/>
+  <testcase name="testPossibleMovesQuick{String, int}[124]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.003"/>
+  <testcase name="testPossibleMovesQuick{String, int}[125]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[126]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[127]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[128]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[129]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[130]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[131]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[132]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[133]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[134]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[135]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[136]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[137]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[138]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[139]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[140]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[141]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[142]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[143]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[144]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[145]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.004"/>
+  <testcase name="testPossibleMovesQuick{String, int}[146]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[147]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[148]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[149]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[150]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[151]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[152]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[153]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[154]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[155]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[156]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[157]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[158]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[159]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[160]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[161]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[162]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[163]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[164]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[165]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[166]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[167]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[168]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[169]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[170]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[171]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[172]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[173]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.002"/>
+  <testcase name="testPossibleMovesQuick{String, int}[174]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[175]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[176]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[177]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[178]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[179]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[180]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[181]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[182]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[183]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[184]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[185]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[186]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[187]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[188]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[189]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[190]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[191]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[192]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[193]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[194]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[195]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[196]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[197]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[198]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[199]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[200]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[201]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[202]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[203]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[204]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.002"/>
+  <testcase name="testPossibleMovesQuick{String, int}[205]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[206]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[207]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[208]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[209]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[210]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[211]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[212]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[213]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[214]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[215]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[216]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[217]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[218]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[219]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[220]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[221]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[222]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesQuick{String, int}[223]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.002"/>
+  <testcase name="testPossibleMovesQuick{String, int}[224]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.001"/>
+  <testcase name="testPossibleMovesQuick{String, int}[225]" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testBoardSize" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0.005"/>
+  <testcase name="testCheckVictoryAndStalemate" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+  <testcase name="testPossibleMovesIntense" classname="MathResearch2019.Tests.TicTacToeNxNTest" time="0"/>
+</testsuite>
