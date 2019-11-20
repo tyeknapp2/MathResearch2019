@@ -1,0 +1,11 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - MathResearch",
+      "request": "launch",
+      "mainClass": "MathResearch2019.Main.MathResearch",
+      "projectName": "MathResearch2019"
+    }
+  ]
+}
