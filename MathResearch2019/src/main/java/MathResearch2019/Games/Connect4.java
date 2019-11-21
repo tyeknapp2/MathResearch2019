@@ -17,6 +17,12 @@ public class Connect4 implements Game {
 public Connect4(int i, int j, boolean b) {
 }
 
+public Connect4(String string) {
+}
+
+public Connect4(String string, boolean b) {
+}
+
 @Override
   public boolean checkVictory() {
     // TODO Auto-generated method stub

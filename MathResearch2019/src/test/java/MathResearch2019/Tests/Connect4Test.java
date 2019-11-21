@@ -20,7 +20,13 @@ public class Connect4Test {
     assertThrows(InvalidBoardString.class, () -> {
       new Connect4(3, 3, true);
     });
+    assertThrows(InvalidBoardString.class, () -> {
+      new Connect4("eeeeeeee");
+    });
+    assertThrows(InvalidBoardString.class, () -> {
+      new Connect4("eeeeeeee", true);
+    });
+
   }
 
-  
 }
