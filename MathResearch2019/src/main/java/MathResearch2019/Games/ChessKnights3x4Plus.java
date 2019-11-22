@@ -19,6 +19,18 @@ public class ChessKnights3x4Plus implements Game {
   public final char PLAYER_1 = 'W';
   public final char PLAYER_2 = 'B';
 
+  public ChessKnights3x4Plus(String g) {
+    board = g.substring(0, 12);
+    toMove = g.charAt(12);
+    checkVictory();
+  }
+
+  public ChessKnights3x4Plus() {
+    board = "WeeeeeeeeeeB";
+    toMove = 'W';
+    victoryStatus = false;
+  }
+
   /**
    * <p>
    * Checks and sets the victory status of the game. A game of knights is
@@ -88,8 +100,8 @@ public class ChessKnights3x4Plus implements Game {
    *         after moving the knight of the color specified by <code>turn</code>.
    */
   @Override
-  public ArrayList<String> possibleMoves(char turn) throws TurnMismatchError {
-    ArrayList<String> possMoves = new ArrayList<String>();
+  public ArrayList<Game> possibleMoves(char turn) throws TurnMismatchError {
+    ArrayList<Game> possMoves = new ArrayList<Game>();
     if (!victoryStatus) {
       char nextToMove = toMove == PLAYER_1 ? PLAYER_2 : PLAYER_1;
       int index = board.indexOf(turn);
@@ -98,44 +110,44 @@ public class ChessKnights3x4Plus implements Game {
 
       String s = board.substring(0, index) + 'e' + board.substring(index + 1);
       if (row + 2 < 3 && col + 1 < 4) {
-        String g = s.substring(0, indexFromRowAndColumn(row + 2, col + 1)) + nextToMove
-            + s.substring(indexFromRowAndColumn(row + 2, col + 1) + 1);
-        possMoves.add(g);
+        String g = s.substring(0, indexFromRowAndColumn(row + 2, col + 1)) + toMove
+            + s.substring(indexFromRowAndColumn(row + 2, col + 1) + 1) + nextToMove;
+        possMoves.add(new ChessKnights3x4Plus(g));
       }
       if (row + 2 < 3 && col - 1 >= 0) {
-        String g = s.substring(0, indexFromRowAndColumn(row + 2, col - 1)) + nextToMove
-            + s.substring(indexFromRowAndColumn(row + 2, col - 1) + 1);
-        possMoves.add(g);
+        String g = s.substring(0, indexFromRowAndColumn(row + 2, col - 1)) + toMove
+            + s.substring(indexFromRowAndColumn(row + 2, col - 1) + 1) + nextToMove;
+        possMoves.add(new ChessKnights3x4Plus(g));
       }
       if (row - 2 >= 0 && col + 1 < 4) {
-        String g = s.substring(0, indexFromRowAndColumn(row - 2, col + 1)) + nextToMove
-            + s.substring(indexFromRowAndColumn(row - 2, col + 1) + 1);
-        possMoves.add(g);
+        String g = s.substring(0, indexFromRowAndColumn(row - 2, col + 1)) + toMove
+            + s.substring(indexFromRowAndColumn(row - 2, col + 1) + 1) + nextToMove;
+        possMoves.add(new ChessKnights3x4Plus(g));
       }
       if (row - 2 >= 0 && col - 1 >= 0) {
-        String g = s.substring(0, indexFromRowAndColumn(row - 2, col - 1)) + nextToMove
-            + s.substring(indexFromRowAndColumn(row - 2, col - 1) + 1);
-        possMoves.add(g);
+        String g = s.substring(0, indexFromRowAndColumn(row - 2, col - 1)) + toMove
+            + s.substring(indexFromRowAndColumn(row - 2, col - 1) + 1) + nextToMove;
+        possMoves.add(new ChessKnights3x4Plus(g));
       }
       if (row + 1 < 3 && col + 2 < 4) {
-        String g = s.substring(0, indexFromRowAndColumn(row + 1, col + 1)) + nextToMove
-            + s.substring(indexFromRowAndColumn(row + 1, col + 1) + 1);
-        possMoves.add(g);
+        String g = s.substring(0, indexFromRowAndColumn(row + 1, col + 1)) + toMove
+            + s.substring(indexFromRowAndColumn(row + 1, col + 1) + 1) + nextToMove;
+        possMoves.add(new ChessKnights3x4Plus(g));
       }
       if (row + 1 < 3 && col - 2 >= 0) {
-        String g = s.substring(0, indexFromRowAndColumn(row + 1, col - 2)) + nextToMove
-            + s.substring(indexFromRowAndColumn(row + 1, col - 2) + 1);
-        possMoves.add(g);
+        String g = s.substring(0, indexFromRowAndColumn(row + 1, col - 2)) + toMove
+            + s.substring(indexFromRowAndColumn(row + 1, col - 2) + 1) + nextToMove;
+        possMoves.add(new ChessKnights3x4Plus(g));
       }
       if (row - 1 >= 0 && col + 2 < 4) {
-        String g = s.substring(0, indexFromRowAndColumn(row - 1, col + 2)) + nextToMove
-            + s.substring(indexFromRowAndColumn(row - 1, col + 2) + 1);
-        possMoves.add(g);
+        String g = s.substring(0, indexFromRowAndColumn(row - 1, col + 2)) + toMove
+            + s.substring(indexFromRowAndColumn(row - 1, col + 2) + 1) + nextToMove;
+        possMoves.add(new ChessKnights3x4Plus(g));
       }
       if (row - 1 >= 0 && col - 2 >= 0) {
-        String g = s.substring(0, indexFromRowAndColumn(row - 1, col - 2)) + nextToMove
-            + s.substring(indexFromRowAndColumn(row - 1, col - 2) + 1);
-        possMoves.add(g);
+        String g = s.substring(0, indexFromRowAndColumn(row - 1, col - 2)) + toMove
+            + s.substring(indexFromRowAndColumn(row - 1, col - 2) + 1) + nextToMove;
+        possMoves.add(new ChessKnights3x4Plus(g));
       }
     }
     return possMoves;
