@@ -16,9 +16,18 @@ public class ReconfigurationGraph {
   private HashMap<Integer, ArrayList<Integer>> adjacencyList;
   private HashMap<Integer, Game> numberToGame;
   private HashMap<Integer, String> numberToBoard;
+  
+  
   private HashMap<Game, ArrayList<Game>> gameToGame;
   private int totalBoards = 0;
 
+  /**
+   * 
+   * @param game
+   * @param player
+   * @param turn
+   * @deprecated
+   *//*
   public ReconfigurationGraph(Game game, char player, int turn) {
     boardToNumber = new HashMap<String, Integer>();
     adjacencyList = new HashMap<Integer, ArrayList<Integer>>();
@@ -29,7 +38,12 @@ public class ReconfigurationGraph {
     createAdjacencyList(game, player, turn);
 
   }
-
+*//**
+ * 
+ * @param game
+ * @param player
+ * @deprecated
+ *//*
   public ReconfigurationGraph(Game game, char player) {
     boardToNumber = new HashMap<String, Integer>();
     adjacencyList = new HashMap<Integer, ArrayList<Integer>>();
@@ -39,6 +53,7 @@ public class ReconfigurationGraph {
 
     createAdjacencyList(game, player, 1);
   }
+*/
 
   public ReconfigurationGraph(Game game) {
 
@@ -46,13 +61,21 @@ public class ReconfigurationGraph {
     adjacencyList = new HashMap<Integer, ArrayList<Integer>>();
     numberToGame = new HashMap<Integer, Game>();
     numberToBoard = new HashMap<Integer, String>();
-
+    gameToGame = new HashMap<Game, ArrayList<Game>>();
     totalBoards = 0;
 
-    createAdjacencyList(game, game.getPlayer1(), 1);
+    createAdjacencyList(game, game.getPlayer1());
 
   }
 
+  /**
+   * 
+   * @param game
+   * @param player
+   * @param turn
+   * @return
+   * @deprecated
+   *//*
   private int createAdjacencyList(Game game, char player, int turn) {
     if (!boardToNumber.containsKey(game.getBoard())) {
       int temp = totalBoards;
@@ -109,7 +132,7 @@ public class ReconfigurationGraph {
     }
 
     return boardToNumber.get(game.getBoard());
-  }
+  }*/
 
   private void createAdjacencyList(Game jGame, char turn) {
     totalBoards += (gameToGame.putIfAbsent(jGame, new ArrayList<Game>()) == null) ? 1 : 0;
@@ -138,6 +161,10 @@ public class ReconfigurationGraph {
 
   public int getTotalBoards() {
     return totalBoards;
+  }
+
+  public boolean contains(Game s) {
+    return gameToGame.containsKey(s);
   }
 
   public boolean contains(String s) {
