@@ -181,4 +181,9 @@ public class TicTacToe3x3 implements Game {
     // TODO Auto-generated method stub
     return null;
   }
+
+  @Override
+  public boolean equals(Object obj) {
+    return obj instanceof TicTacToe3x3 && this.board.equals(((TicTacToe3x3) obj).getBoard());
+  }
 }

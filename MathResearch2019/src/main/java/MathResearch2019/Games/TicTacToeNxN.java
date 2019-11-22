@@ -250,4 +250,14 @@ public class TicTacToeNxN implements Game {
     return null;
   }
 
+  @Override
+  public boolean equals(Object obj) {
+    return obj instanceof TicTacToeNxN && this.board.equals(((TicTacToeNxN) obj).getBoard());
+  }
+
+  @Override
+  public int hashCode() {
+    return this.board.hashCode();
+  }
+
 }
