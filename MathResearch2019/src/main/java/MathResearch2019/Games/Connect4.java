@@ -12,18 +12,18 @@ import MathResearch2019.Errors.TurnMismatchError;
 public class Connect4 implements Game {
 
   public Connect4(int i, int j) {
-	}
+  }
 
-public Connect4(int i, int j, boolean b) {
-}
+  public Connect4(int i, int j, boolean b) {
+  }
 
-public Connect4(String string) {
-}
+  public Connect4(String string) {
+  }
 
-public Connect4(String string, boolean b) {
-}
+  public Connect4(String string, boolean b) {
+  }
 
-@Override
+  @Override
   public boolean checkVictory() {
     // TODO Auto-generated method stub
     return false;
@@ -54,8 +54,8 @@ public Connect4(String string, boolean b) {
   }
 
   @Override
-  public ArrayList<String> possibleMoves(char turn) throws TurnMismatchError {
-    // TODO Auto-generated method stub
+  public ArrayList<Game> possibleMoves(char turn) throws TurnMismatchError {
+    ArrayList<Game> Arraylist = new ArrayList<Game>();
     return null;
   }
 
@@ -89,5 +89,9 @@ public Connect4(String string, boolean b) {
     return null;
   }
 
-  
+  @Override
+  public int hashCode() {
+    return this.getBoard().hashCode();
+  }
+
 }
