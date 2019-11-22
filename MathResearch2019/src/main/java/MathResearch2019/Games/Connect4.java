@@ -11,7 +11,10 @@ import MathResearch2019.Errors.TurnMismatchError;
  */
 public class Connect4 implements Game {
 
+  private String board;
   private boolean isCyclic;
+  private final char PLAYER_2 = 'B';
+  private final char PLAYER_1 = 'R';
 
   public Connect4(int i, int j) {
   }
@@ -51,37 +54,35 @@ public class Connect4 implements Game {
 
   @Override
   public String getBoard() {
-    // TODO Auto-generated method stub
-    return null;
+    return board;
   }
 
   @Override
   public ArrayList<Game> possibleMoves(char turn) throws TurnMismatchError {
     ArrayList<Game> Arraylist = new ArrayList<Game>();
-    return null;
+    S
   }
 
   @Override
   public char getPlayer1() {
-    // TODO Auto-generated method stub
-    return 0;
+    return PLAYER_1;
   }
 
   @Override
   public char getPlayer2() {
-    // TODO Auto-generated method stub
-    return 0;
+    return PLAYER_2;
   }
 
+  // not Used
   @Override
   public void setTurnTruth(char turn) {
     // TODO Auto-generated method stub
 
   }
 
+  // Not used
   @Override
   public boolean getTurnTruth(char turn) {
-    // TODO Auto-generated method stub
     return false;
   }
 
