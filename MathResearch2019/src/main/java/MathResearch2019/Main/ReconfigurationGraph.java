@@ -16,6 +16,7 @@ public class ReconfigurationGraph {
   private HashMap<Integer, ArrayList<Integer>> adjacencyList;
   private HashMap<Integer, Game> numberToGame;
   private HashMap<Integer, String> numberToBoard;
+  private HashMap<Game, ArrayList<Game>> gameToGame;
   private int totalBoards = 0;
 
   public ReconfigurationGraph(Game game, char player, int turn) {
@@ -45,6 +46,7 @@ public class ReconfigurationGraph {
     adjacencyList = new HashMap<Integer, ArrayList<Integer>>();
     numberToGame = new HashMap<Integer, Game>();
     numberToBoard = new HashMap<Integer, String>();
+
     totalBoards = 0;
 
     createAdjacencyList(game, game.getPlayer1(), 1);
@@ -107,6 +109,31 @@ public class ReconfigurationGraph {
     }
 
     return boardToNumber.get(game.getBoard());
+  }
+
+  private void createAdjacencyList(Game jGame, char turn) {
+    totalBoards += (gameToGame.putIfAbsent(jGame, new ArrayList<Game>()) == null) ? 1 : 0;
+    if (!jGame.seeVictoryStatus() && !jGame.checkStalemateStatus()) {
+      ArrayList<Game> h = gameToGame.get(jGame);
+      try {
+        if (h.size() == 0) {
+          jGame.setTurnTruth(turn);
+          h.add(jGame);
+          for (Game game : jGame.possibleMoves(turn)) {
+            h.add(game);
+            createAdjacencyList(game, turn == jGame.getPlayer1() ? jGame.getPlayer2() : jGame.getPlayer1());
+          }
+        } else if (!h.get(0).getTurnTruth(turn)) {
+          h.get(0).setTurnTruth(turn);
+          for (Game game : jGame.possibleMoves(turn)) {
+            h.add(game);
+            createAdjacencyList(game, turn == jGame.getPlayer1() ? jGame.getPlayer2() : jGame.getPlayer1());
+          }
+        }
+      } catch (TurnMismatchError e) {
+        e.printStackTrace();
+      }
+    }
   }
 
   public int getTotalBoards() {
