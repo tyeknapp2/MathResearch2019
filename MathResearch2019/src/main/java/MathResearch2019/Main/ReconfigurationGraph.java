@@ -63,9 +63,6 @@ public class ReconfigurationGraph {
         numberToGame.get(temp).setTurnTruth(player);
         try {
           for (String b : game.possibleMoves(player)) {
-            // if (game instanceof TicTacToe3x3)
-            // adjacencyList.get(temp).add(createAdjacencyList(new TicTacToe3x3(b),
-            // (turn == 1 ? game.getPlayer2() : game.getPlayer1()), (turn == 1 ? 2 : 1)));
             if (game instanceof ChessKings3x3) {
               adjacencyList.get(temp).add(createAdjacencyList(new ChessKings3x3(b),
                   (turn == 1 ? game.getPlayer2() : game.getPlayer1()), (turn == 1 ? 2 : 1)));
@@ -89,9 +86,6 @@ public class ReconfigurationGraph {
         numberToGame.get(temp).setTurnTruth(player);
         try {
           for (String b : game.possibleMoves(player)) {
-            // if (game instanceof TicTacToe3x3)
-            // adjacencyList.get(temp).add(createAdjacencyList(new TicTacToe3x3(b),
-            // (turn == 1 ? game.getPlayer2() : game.getPlayer1()), (turn == 1 ? 2 : 1)));
             if (game instanceof ChessKings3x3) {
               adjacencyList.get(temp).add(createAdjacencyList(new ChessKings3x3(b),
                   (turn == 1 ? game.getPlayer2() : game.getPlayer1()), (turn == 1 ? 2 : 1)));
