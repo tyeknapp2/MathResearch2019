@@ -197,16 +197,21 @@ public class TicTacToeNxN implements Game {
   }
 
   @Override
-  public ArrayList<String> possibleMoves(char turn) {
-    ArrayList<String> moves = new ArrayList<String>();
+  public ArrayList<Game> possibleMoves(char turn) {
+    ArrayList<Game> moves = new ArrayList<Game>();
     if (!stalemateStatus && !victoryStatus)
       for (int i = 0; i < board.length(); i++) {
         if (board.charAt(i) == 'e') {
-          if (i < board.length() - 1)
-            moves.add(board.substring(0, i) + turn + board.substring(i + 1));
-          else
-            moves.add(board.substring(0, i) + turn);
+          try {
+            if (i < board.length() - 1)
+              moves.add(new TicTacToeNxN(board.substring(0, i) + turn + board.substring(i + 1)));
+            else
+              moves.add(new TicTacToeNxN(board.substring(0, i) + turn));
+          } catch (Exception e) {
+            e.printStackTrace();
+          }
         }
+
       }
 
     return moves;
