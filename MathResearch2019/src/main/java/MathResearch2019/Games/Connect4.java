@@ -11,6 +11,8 @@ import MathResearch2019.Errors.TurnMismatchError;
  */
 public class Connect4 implements Game {
 
+  private boolean isCyclic;
+
   public Connect4(int i, int j) {
   }
 
@@ -92,6 +94,16 @@ public class Connect4 implements Game {
   @Override
   public int hashCode() {
     return this.getBoard().hashCode();
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    return obj instanceof Connect4 && this.getBoard().equals(((Connect4) obj).getBoard())
+        && ((Connect4) obj).getCyclic() == this.getCyclic();
+  }
+
+  private boolean getCyclic() {
+    return isCyclic;
   }
 
 }
