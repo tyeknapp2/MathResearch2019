@@ -211,4 +211,15 @@ public class ChessKings3x3 implements Game {
     return null;
   }
 
+  
+  @Override
+  public boolean equals(Object obj) {
+    return obj instanceof ChessKnights3x4Plus && this.getBoard().equals(((ChessKnights3x4Plus) obj).getBoard());
+  }
+
+  @Override
+  public int hashCode() {
+    return this.getBoard().hashCode();
+  }
+
 }
