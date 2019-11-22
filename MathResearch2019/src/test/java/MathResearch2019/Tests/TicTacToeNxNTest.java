@@ -103,6 +103,7 @@ public class TicTacToeNxNTest {
       assertTrue(!test4x4.seeStalemateStatus() && test4x4.seeVictoryStatus());
       test4x4 = new TicTacToeNxN("OXXOXOOXOXXOXOXO");
       assertTrue(test4x4.seeStalemateStatus() && !test4x4.seeVictoryStatus());
+      
       Game test5x5 = new TicTacToeNxN(5);
       assertTrue(!test5x5.seeStalemateStatus() && !test5x5.seeVictoryStatus());
       test5x5 = new TicTacToeNxN("OeeeOeeeeeeeeeeeeeeeOeeeO");
