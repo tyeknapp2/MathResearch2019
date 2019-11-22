@@ -125,15 +125,15 @@ public class TicTacToe4x4 implements Game {
   }
 
   @Override
-  public ArrayList<String> possibleMoves(char turn) {
-    ArrayList<String> moves = new ArrayList<String>();
+  public ArrayList<Game> possibleMoves(char turn) {
+    ArrayList<Game> moves = new ArrayList<Game>();
     if (!stalemateStatus && !victoryStatus)
       for (int i = 0; i < 16; i++) {
         if (board.charAt(i) == 'e') {
           if (i < 15)
-            moves.add(board.substring(0, i) + turn + board.substring(i + 1));
+            moves.add(new TicTacToe4x4(board.substring(0, i) + turn + board.substring(i + 1)));
           else
-            moves.add(board.substring(0, i) + turn);
+            moves.add(new TicTacToe4x4(board.substring(0, i) + turn));
         }
       }
     return moves;

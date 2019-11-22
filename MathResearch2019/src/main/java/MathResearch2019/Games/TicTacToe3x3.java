@@ -42,15 +42,15 @@ public class TicTacToe3x3 implements Game {
    * turn Throws an error if the character is not an X or O
    */
   @Override
-  public ArrayList<String> possibleMoves(char turn) {
-    ArrayList<String> moves = new ArrayList<String>();
+  public ArrayList<Game> possibleMoves(char turn) {
+    ArrayList<Game> moves = new ArrayList<Game>();
     if (!stalemateStatus && !victoryStatus)
       for (int i = 0; i < 9; i++) {
         if (board.charAt(i) == 'e') {
           if (i < 8)
-            moves.add(board.substring(0, i) + turn + board.substring(i + 1));
+            moves.add(new TicTacToe3x3(board.substring(0, i) + turn + board.substring(i + 1)));
           else
-            moves.add(board.substring(0, i) + turn);
+            moves.add(new TicTacToe3x3(board.substring(0, i) + turn));
         }
       }
     return moves;
