@@ -15,6 +15,8 @@ public class Connect4 implements Game {
   private boolean isCyclic;
   private final char PLAYER_2 = 'B';
   private final char PLAYER_1 = 'R';
+  private boolean victoryStatus;
+  private boolean stalemateStatus;
 
   public Connect4(int i, int j) {
   }
@@ -31,25 +33,23 @@ public class Connect4 implements Game {
   @Override
   public boolean checkVictory() {
     // TODO Auto-generated method stub
-    return false;
+    return victoryStatus;
   }
 
   @Override
   public boolean checkStalemateStatus() {
-    // TODO Auto-generated method stub
-    return false;
+    stalemateStatus = board.contains("e");
+    return stalemateStatus;
   }
 
   @Override
   public boolean seeStalemateStatus() {
-    // TODO Auto-generated method stub
-    return false;
+    return stalemateStatus;
   }
 
   @Override
   public boolean seeVictoryStatus() {
-    // TODO Auto-generated method stub
-    return false;
+    return victoryStatus;
   }
 
   @Override
@@ -59,8 +59,7 @@ public class Connect4 implements Game {
 
   @Override
   public ArrayList<Game> possibleMoves(char turn) throws TurnMismatchError {
-    ArrayList<Game> Arraylist = new ArrayList<Game>();
-    S
+    ArrayList<Game> outArrayList = new ArrayList<Game>();
   }
 
   @Override
