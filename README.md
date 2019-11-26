@@ -4,7 +4,7 @@ This is a completely restructured version of [MathResearch](https://github.com/t
 
 ## The Research
 
-This project focuses on observing Reconfiguration graphs of 2-player adversarial games such as TicTacToe and small versions of Chess. I am trying to look at smaller versions of these games to identify graph properties of their larger counter parts. I hope to be able to identify and generalize these games.
+This project focuses on observing reconfiguration graphs of 2-player adversarial games such as TicTacToe and small versions of Chess. I am trying to look at smaller versions of these games to identify graph properties of their larger counter parts. I hope to be able to identify and generalize these games.
 
 
 ## Games
