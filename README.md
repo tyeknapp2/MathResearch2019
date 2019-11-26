@@ -10,7 +10,7 @@ This project focuses on observing Reconfiguration graphs of 2-player adversarial
 ## Games
 A full list of games so far:
 * TicTacToe
- * Works with 3x3
+  * Works with 3x3
 * Chess
   * 2 Knights on a 3x4
   * 2 Kings on a 3x3
