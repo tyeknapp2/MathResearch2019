@@ -16,3 +16,6 @@ A full list of games so far:
   * 2 Kings on a 3x3
 * L-game (To Be Implemented)
 * Connect 4 (In Progress)
+
+### Contact Info
+If you are interested in learning more feel free to email me at tyeknapp.pro@gmail.com.
