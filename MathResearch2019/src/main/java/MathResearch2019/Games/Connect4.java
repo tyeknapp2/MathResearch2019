@@ -73,7 +73,7 @@ public class Connect4 implements Game {
     board = string;
     rows = r;
     cols = c;
-    isCyclic=false;
+    isCyclic = false;
     checkVictory();
   }
 
@@ -84,7 +84,7 @@ public class Connect4 implements Game {
     board = string;
     rows = r;
     cols = c;
-    isCyclic=b;
+    isCyclic = b;
     checkVictory();
   }
 
@@ -336,7 +336,7 @@ public class Connect4 implements Game {
 
       }
 
-      if (Math.abs(rCount - bCount) <= 1) {
+      if ((Math.abs(rCount - bCount) <= 1) && (!victory || Math.random() <= .25)) {
         String board = "";
         for (int j = 5; j >= 0; j--) {
           board += col1Stack.get(j) + "" + col2Stack.get(j) + col3Stack.get(j) + col4Stack.get(j) + col5Stack.get(j)
