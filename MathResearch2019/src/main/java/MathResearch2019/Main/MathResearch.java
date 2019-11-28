@@ -2,6 +2,7 @@ package MathResearch2019.Main;
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 import com.google.gson.*;
 
@@ -19,15 +20,20 @@ public class MathResearch {
     ReconfigurationGraph graph = new ReconfigurationGraph(new TicTacToeNxN());
 
     try {
-      PrintStream fileOut = new PrintStream("./out2.txt");
+      PrintStream fileOut = new PrintStream("./RandomC4Boards.csv");
       System.setOut(fileOut);
     } catch (FileNotFoundException e) {
       e.printStackTrace();
     }
-    String jsonString = gsonBuilder.toJson(graph);
-    JsonObject json = JsonParser.parseString(jsonString).getAsJsonObject();
-    System.out.println(json.getClass());
-    System.out.println(json.keySet());
-    System.out.println(json);
+    /*
+     * String jsonString = gsonBuilder.toJson(graph); JsonObject json =
+     * JsonParser.parseString(jsonString).getAsJsonObject();
+     * System.out.println(json.getClass()); System.out.println(json.keySet());
+     * System.out.println(json);
+     */
+    System.out.println("Test1,");
+    Connect4.printC4Boards(3000);
+
   }
+
 }
