@@ -90,13 +90,25 @@ public class Connect4 implements Game {
 
   @Override
   public boolean checkVictory() {
-    // TODO Auto-generated method stub
+    String tempBoard = "";
+    for (int r = 0; r < rows; r++) {
+      tempBoard += board.substring(r * cols, r * cols + cols) + "\n";
+    }
+    tempBoard = tempBoard.trim();
+    String regexString = "(r{4}|b{4})|((?<backslash>r|b).{" + (cols - (byte) 1) + "}\\k<backslash>.{"
+        + (cols - (byte) 1) + "}\\k<backslash>.{" + (cols - (byte) 1) + "}\\k<backslash>)|((?<forwardslash>r|b).{"
+        + (cols + (byte) 1) + "}\\k<forwardslash>.{" + (cols + (byte) 1) + "}\\k<forwardslash>.{" + (cols + (byte) 1)
+        + "}\\k<forwardslash>)|((?<col>r|b).{" + cols + "}\\k<col>.{" + cols + "}\\k<col>.{" + cols + "}\\k<col>)";
+    Pattern p = Pattern.compile(regexString, Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE | Pattern.DOTALL);
+    Matcher m = p.matcher(tempBoard);
+    victoryStatus = m.find();
+    checkStalemateStatus();
     return victoryStatus;
   }
 
   @Override
   public boolean checkStalemateStatus() {
-    stalemateStatus = !board.contains("e");
+    stalemateStatus = !board.contains("e") && !victoryStatus;
     return stalemateStatus;
   }
 
@@ -134,7 +146,6 @@ public class Connect4 implements Game {
   @Override
   public void setTurnTruth(char turn) {
     // TODO Auto-generated method stub
-
   }
 
   // Not used
