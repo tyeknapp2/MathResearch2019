@@ -21,6 +21,20 @@ public class Connect4 implements Game {
   private boolean victoryStatus;
   private boolean stalemateStatus;
 
+  public Connect4(){
+    byte i=4;
+    byte j=4;
+    rows = i;
+    cols = j;
+    for (int g = 0; g < i; g++) {
+      for (int h = 0; h < j; h++)
+        board += "e";
+    }
+    isCyclic = false;
+    victoryStatus = false;
+    stalemateStatus = false;
+  }
+
   public Connect4(byte i, byte j) throws InvalidBoardString {
     if (i < 4 && j < 4)
       throw new InvalidBoardString("Board too small");
@@ -36,7 +50,18 @@ public class Connect4 implements Game {
     stalemateStatus = false;
   }
 
-  public Connect4(int i, int j, boolean b) {
+  public Connect4(byte i, byte j, boolean b) throws InvalidBoardString {
+    if (i < 4 && j < 4)
+      throw new InvalidBoardString("Board too small");
+      for (int g = 0; g < i; g++) {
+        for (int h = 0; h < j; h++)
+          board += "e";
+      }
+      rows = i;
+      cols = j;
+      isCyclic = b;
+      victoryStatus = false;
+      stalemateStatus = false;
   }
 
   public Connect4(String string, int rows, int cols) {
