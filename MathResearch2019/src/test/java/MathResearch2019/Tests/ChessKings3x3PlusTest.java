@@ -43,24 +43,24 @@ public class ChessKings3x3PlusTest {
     Game chess = new ChessKings3x3Plus();
     try {
       assertTrue(chess.possibleMoves(chess.getPlayer1()).size() == 2);
-      assertTrue(chess.possibleMoves(chess.getPlayer1()).contains("eWeeeeeeBB"));
-      assertTrue(chess.possibleMoves(chess.getPlayer1()).contains("eeeWeeeeBB"));
+      assertTrue(chess.possibleMoves(chess.getPlayer1()).contains(new ChessKings3x3Plus("eWeeeeeeBB")));
+      assertTrue(chess.possibleMoves(chess.getPlayer1()).contains(new ChessKings3x3Plus("eeeWeeeeBB")));
       chess = new ChessKings3x3Plus("WeeeeeeeBB");
       assertTrue(chess.possibleMoves(chess.getPlayer2()).size() == 2);
-      assertTrue(chess.possibleMoves(chess.getPlayer2()).contains("WeeeeBeeeW"));
-      assertTrue(chess.possibleMoves(chess.getPlayer2()).contains("WeeeeeeBeW"));
+      assertTrue(chess.possibleMoves(chess.getPlayer2()).contains(new ChessKings3x3Plus("WeeeeBeeeW")));
+      assertTrue(chess.possibleMoves(chess.getPlayer2()).contains(new ChessKings3x3Plus("WeeeeeeBeW")));
       chess = new ChessKings3x3Plus("eWeeeeeeBB");
       assertTrue(chess.possibleMoves(chess.getPlayer2()).size() == 1);
-      assertTrue(chess.possibleMoves(chess.getPlayer2()).contains("eWeeeeeBeW"));
+      assertTrue(chess.possibleMoves(chess.getPlayer2()).contains(new ChessKings3x3Plus("eWeeeeeBeW")));
       chess = new ChessKings3x3Plus("eWeeeeeBeW");
       assertTrue(chess.possibleMoves(chess.getPlayer1()).size() == 2);
-      assertTrue(chess.possibleMoves(chess.getPlayer1()).contains("WeeeeeeBeB"));
-      assertTrue(chess.possibleMoves(chess.getPlayer1()).contains("eeWeeeeBeB"));
+      assertTrue(chess.possibleMoves(chess.getPlayer1()).contains(new ChessKings3x3Plus("WeeeeeeBeB")));
+      assertTrue(chess.possibleMoves(chess.getPlayer1()).contains(new ChessKings3x3Plus("eeWeeeeBeB")));
       chess = new ChessKings3x3Plus("WeeeeeeBeB");
       assertTrue(chess.possibleMoves(chess.getPlayer2()).size() == 3);
-      assertTrue(chess.possibleMoves(chess.getPlayer2()).contains("WeeeeeeeBW"));
-      assertTrue(chess.possibleMoves(chess.getPlayer2()).contains("WeeeeeBeeW"));
-      assertTrue(chess.possibleMoves(chess.getPlayer2()).contains("WeeeeBeeeW"));
+      assertTrue(chess.possibleMoves(chess.getPlayer2()).contains(new ChessKings3x3Plus("WeeeeeeeBW")));
+      assertTrue(chess.possibleMoves(chess.getPlayer2()).contains(new ChessKings3x3Plus("WeeeeeBeeW")));
+      assertTrue(chess.possibleMoves(chess.getPlayer2()).contains(new ChessKings3x3Plus("WeeeeBeeeW")));
     } catch (InvalidBoardString | TurnMismatchError e) {
 
       e.printStackTrace();

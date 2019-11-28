@@ -57,83 +57,87 @@ public class ChessKings3x3 implements Game {
   }
 
   @Override
-  public ArrayList<String> possibleMoves(char turn) {
-    ArrayList<String> possMoves = new ArrayList<String>();
+  public ArrayList<Game> possibleMoves(char turn) {
+    ArrayList<Game> possMoves = new ArrayList<Game>();
     int x = board.indexOf(turn);
     String s;
-    if (x == 0) {
-      s = "e" + turn + board.substring(2);
-      if (validMove(s, turn))
-        possMoves.add(s);
-      s = board.substring(0, 3).replace(turn, 'e') + turn + board.substring(4);
-      if (validMove(s, turn))
-        possMoves.add(s);
-    } else if (x == 1) {
-      for (int i = 0; i < 6; i++) {
-        if (!(i == 1)) {
+    try {
+      if (x == 0) {
+        s = "e" + turn + board.substring(2);
+        if (validMove(s, turn))
+          possMoves.add(new ChessKings3x3(s));
+        s = board.substring(0, 3).replace(turn, 'e') + turn + board.substring(4);
+        if (validMove(s, turn))
+          possMoves.add(new ChessKings3x3(s));
+      } else if (x == 1) {
+        for (int i = 0; i < 6; i++) {
+          if (!(i == 1)) {
+            s = board.substring(0, i).replace(turn, 'e') + turn + board.substring(i + 1).replace(turn, 'e');
+
+            if (validMove(s, turn))
+              possMoves.add(new ChessKings3x3(s));
+          }
+        }
+
+      } else if (x == 2) {
+        for (int i = 1; i < 6; i++) {
+          if (i == 2 || i == 3) {
+            continue;
+          }
           s = board.substring(0, i).replace(turn, 'e') + turn + board.substring(i + 1).replace(turn, 'e');
-
           if (validMove(s, turn))
-            possMoves.add(s);
+            possMoves.add(new ChessKings3x3(s));
         }
-      }
 
-    } else if (x == 2) {
-      for (int i = 1; i < 6; i++) {
-        if (i == 2 || i == 3) {
-          continue;
+      } else if (x == 3) {
+        for (int i = 0; i < 8; i++) {
+          if (i == 2 || i == 5 || i == 3) {
+            continue;
+          }
+          s = board.substring(0, i).replace(turn, 'e') + turn + board.substring(i + 1).replace(turn, 'e');
+          if (validMove(s, turn))
+            possMoves.add(new ChessKings3x3(s));
         }
-        s = board.substring(0, i).replace(turn, 'e') + turn + board.substring(i + 1).replace(turn, 'e');
-        if (validMove(s, turn))
-          possMoves.add(s);
-      }
 
-    } else if (x == 3) {
-      for (int i = 0; i < 8; i++) {
-        if (i == 2 || i == 5 || i == 3) {
-          continue;
+      } else if (x == 5) {
+        for (int i = 1; i < 9; i++) {
+          if (i == 3 || i == 6 || i == 5) {
+            continue;
+          }
+          s = board.substring(0, i).replace(turn, 'e') + turn + board.substring(i + 1).replace(turn, 'e');
+          if (validMove(s, turn))
+            possMoves.add(new ChessKings3x3(s));
         }
-        s = board.substring(0, i).replace(turn, 'e') + turn + board.substring(i + 1).replace(turn, 'e');
-        if (validMove(s, turn))
-          possMoves.add(s);
-      }
-
-    } else if (x == 5) {
-      for (int i = 1; i < 9; i++) {
-        if (i == 3 || i == 6 || i == 5) {
-          continue;
+      } else if (x == 6) {
+        for (int i = 3; i < 8; i++) {
+          if (i == 5 || i == 6) {
+            continue;
+          }
+          s = board.substring(0, i).replace(turn, 'e') + turn + board.substring(i + 1).replace(turn, 'e');
+          if (validMove(s, turn))
+            possMoves.add(new ChessKings3x3(s));
         }
-        s = board.substring(0, i).replace(turn, 'e') + turn + board.substring(i + 1).replace(turn, 'e');
-        if (validMove(s, turn))
-          possMoves.add(s);
-      }
-    } else if (x == 6) {
-      for (int i = 3; i < 8; i++) {
-        if (i == 5 || i == 6) {
-          continue;
+      } else if (x == 7) {
+        for (int i = 3; i < 9; i++) {
+          if (i == 7) {
+            continue;
+          }
+          s = board.substring(0, i).replace(turn, 'e') + turn + board.substring(i + 1).replace(turn, 'e');
+          if (validMove(s, turn))
+            possMoves.add(new ChessKings3x3(s));
         }
-        s = board.substring(0, i).replace(turn, 'e') + turn + board.substring(i + 1).replace(turn, 'e');
-        if (validMove(s, turn))
-          possMoves.add(s);
-      }
-    } else if (x == 7) {
-      for (int i = 3; i < 9; i++) {
-        if (i == 7) {
-          continue;
+      } else if (x == 8) {
+        for (int i = 4; i < 8; i++) {
+          if (i == 6) {
+            continue;
+          }
+          s = board.substring(0, i).replace(turn, 'e') + turn + board.substring(i + 1).replace(turn, 'e');
+          if (validMove(s, turn))
+            possMoves.add(new ChessKings3x3(s));
         }
-        s = board.substring(0, i).replace(turn, 'e') + turn + board.substring(i + 1).replace(turn, 'e');
-        if (validMove(s, turn))
-          possMoves.add(s);
       }
-    } else if (x == 8) {
-      for (int i = 4; i < 8; i++) {
-        if (i == 6) {
-          continue;
-        }
-        s = board.substring(0, i).replace(turn, 'e') + turn + board.substring(i + 1).replace(turn, 'e');
-        if (validMove(s, turn))
-          possMoves.add(s);
-      }
+    } catch (Exception e) {
+      e.printStackTrace();
     }
     return possMoves;
   }
@@ -209,6 +213,16 @@ public class ChessKings3x3 implements Game {
   public JsonObject toJSON() {
     // TODO Auto-generated method stub
     return null;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    return obj instanceof ChessKnights3x4Plus && this.getBoard().equals(((ChessKnights3x4Plus) obj).getBoard());
+  }
+
+  @Override
+  public int hashCode() {
+    return this.getBoard().hashCode();
   }
 
 }

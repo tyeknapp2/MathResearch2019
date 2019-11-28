@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import MathResearch2019.Errors.InvalidBoardString;
 import MathResearch2019.Games.TicTacToeNxN;
 import MathResearch2019.Main.ReconfigurationGraph;
 
@@ -285,10 +286,13 @@ public class ReconfigurationGraphTest {
       "eOOOeeeXX", "OXeXOOeee", "OXeeOOXOX", "XOeOXXeOO", "eeeeeeeXO" })
   public void testGraphContains(String str) {
 
-    if (str.length() == 9)
-      assertTrue(str, r3x3.contains(str));
-    // else if(str.length()== 16)
-
+    if (str.length() == 9) {
+      try {
+        assertTrue(str, r3x3.contains(new TicTacToeNxN(str)));
+      } catch (InvalidBoardString e) {
+        e.printStackTrace();
+      }
+    }
   }
 
 }

@@ -43,7 +43,7 @@ public interface Game {
    * @return
    * @throws TurnMismatchError
    */
-  public ArrayList<String> possibleMoves(char turn) throws TurnMismatchError;
+  public ArrayList<Game> possibleMoves(char turn) throws TurnMismatchError;
 
   /**
    * 
