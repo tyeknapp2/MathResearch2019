@@ -77,7 +77,15 @@ public class Connect4 implements Game {
     checkVictory();
   }
 
-  public Connect4(String string, byte r, byte c, boolean b) {
+  public Connect4(String string, byte r, byte c, boolean b) throws InvalidBoardString {
+    if (string.length() != (int) r * (int) c) {
+      throw new InvalidBoardString("Input String and size don't match");
+    }
+    board = string;
+    rows = r;
+    cols = c;
+    isCyclic=b;
+    checkVictory();
   }
 
   @Override
