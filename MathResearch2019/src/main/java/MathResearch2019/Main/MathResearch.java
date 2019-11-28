@@ -2,7 +2,7 @@ package MathResearch2019.Main;
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
-import java.util.ArrayList;
+
 
 import com.google.gson.*;
 

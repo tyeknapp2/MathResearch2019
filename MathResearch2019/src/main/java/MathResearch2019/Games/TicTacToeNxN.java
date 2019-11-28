@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import com.google.gson.JsonObject;
 
 import MathResearch2019.Errors.InvalidBoardString;
+import java.util.regex.*;
 
 /**
  * @author TyeKnappenberger
@@ -76,80 +77,21 @@ public class TicTacToeNxN implements Game {
    */
   @Override
   public boolean checkVictory() {
-
-    stalemateStatus = false;
-
-    char[][] arrBoard = convertBoardStringToBoardArr();
-
-    // \ diagonal check
-    for (int i = 1; i <= boardSize; i++) {
-      if (i == boardSize) {
-        victoryStatus = true;
-        return true;
-      }
-      if (arrBoard[0][0] == 'e' || arrBoard[0][0] != arrBoard[i][i])
-        break;
+    String tempBoard = "";
+    for (int r = 0; r < boardSize; r++) {
+      tempBoard += board.substring(r * boardSize, r * boardSize + boardSize) + "\n";
     }
-    // / diagonal check
-    for (int i = 1; i <= boardSize; i++) {
-      if (i == boardSize) {
-        victoryStatus = true;
-        return true;
-      }
-      if (arrBoard[0][boardSize - 1] == 'e' || arrBoard[0][boardSize - 1] != arrBoard[i][boardSize - 1 - i])
-        break;
-    }
+    String regexString = "(x{" + boardSize + "}|o{" + boardSize + "})|(?<col>x|o)(.{" + boardSize + "}\\k<col>){"
+        + (boardSize - 1) + "}|(?<bslash>x|o)(.{" + (boardSize - 1) + "}\\k<bslash>){" + (boardSize - 1)
+        + "}|(?<fslash>x|o)(.{" + (boardSize + 1) + "}\\k<fslash>){" + (boardSize - 1) + "}"
+        + (boardSize >= 4
+            ? "|(?<sqr>x|o)\\k<sqr>.{" + (boardSize - 1) + "}\\k<sqr>\\k<sqr>|(?<crn>x|o).{" + (boardSize - 2)
+                + "}\\k<crn>.{11}\\k<crn>.{" + (boardSize - 2) + "}\\k<crn>"
+            : "");
+    Pattern p = Pattern.compile(regexString);
+    Matcher m = p.matcher(tempBoard);
+    victoryStatus = m.find();
 
-    // horizontal checks
-    for (int i = 0; i < boardSize; i++) {
-      char c = arrBoard[i][0];
-      if (c != 'e')
-        for (int j = 1; j <= boardSize; j++) {
-          if (j == boardSize) {
-            victoryStatus = true;
-            return true;
-          } else if (arrBoard[i][j] != c) {
-            break;
-          }
-        }
-    }
-    // vertical checks
-    for (int i = 0; i < boardSize; i++) {
-      char c = arrBoard[0][i];
-      if (c != 'e')
-        for (int j = 1; j <= boardSize; j++) {
-          if (j == boardSize) {
-            victoryStatus = true;
-            return true;
-          } else if (arrBoard[j][i] != c) {
-            break;
-          }
-        }
-    }
-
-    /**
-     * 
-     */
-    if (boardSize > 3) {
-      // corners check
-      if (arrBoard[0][0] != 'e' && arrBoard[0][0] == arrBoard[0][boardSize - 1]
-          && arrBoard[0][0] == arrBoard[boardSize - 1][0] && arrBoard[0][0] == arrBoard[boardSize - 1][boardSize - 1]) {
-        victoryStatus = true;
-        return true;
-      }
-
-      // square checks
-
-      for (int i = 0; i < boardSize - 1; i++) {
-        for (int j = 0; j < boardSize - 1; j++) {
-          if (arrBoard[i][j] != 'e' && arrBoard[i][j] == arrBoard[i + 1][j] && arrBoard[i][j] == arrBoard[i][j + 1]
-              && arrBoard[i][j] == arrBoard[i + 1][j + 1]) {
-            victoryStatus = true;
-            return true;
-          }
-        }
-      }
-    }
     /**
      * If no victory condition is met, it checks for a stalemate.
      */
