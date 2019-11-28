@@ -130,6 +130,25 @@ public class Connect4 implements Game {
   @Override
   public ArrayList<Game> possibleMoves(char turn) throws TurnMismatchError {
     ArrayList<Game> outArrayList = new ArrayList<Game>();
+    if (!victoryStatus) {
+      for (int j = 0; j < cols; j++) {
+        if (board.charAt(j) == 'e') {
+          int target = j;
+          for (int i = 0; i < rows; i++) {
+            if (board.charAt(i * cols + j) == 'e')
+              target = i * cols + j;
+          }
+          try {
+            outArrayList.add(new Connect4(board.substring(0, target) + turn + board.substring(target + 1), rows, cols));
+          } catch (Exception e) {
+            System.err.println(e.getMessage());
+            e.printStackTrace();
+          }
+
+        }
+      }
+    }
+    return outArrayList;
   }
 
   @Override

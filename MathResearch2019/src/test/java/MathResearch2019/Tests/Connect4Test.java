@@ -3077,7 +3077,7 @@ public class Connect4Test {
       "eReeBeeeBeeBeeeReeBeeBRReReeRRReBReBBBRBRB,6,7,5", "eeeeeeeeeeeeeeeReeeBeeReeeBBRReeRBBBBRBRBR,6,7,0",
       "eeeeeeeeeeeeeeReeeeeeReRBBeRRBRBBeBRBRBBRB,6,7,0", "eeeeeeeeeeeeeeReeeeeeReeReBBReBBeBRRBBBRRB,6,7,0",
       "eeReeeeeeBeeReeeReeReeBReeBReBBRBRBBRRRBBB,6,7,6", "eeeeeReeReeeReBBeeeBeBBBeRRBBRRBBRRRRBRRBB,6,7,6",
-      "RBBeeeRRBBeeeRBBBeeeBRRReeeRBBReeBBRRRBRBR,6,7,3", })
+      "RBBeeeRRBBeeeRBBBeeeBRRReeeRBBReeBBRRRBRBR,6,7,3" })
   public void testPossMovesArrSize(String board, int rows, int cols, int targetSize) {
     try {
       Connect4 connect4 = new Connect4(board, (byte) rows, (byte) cols);
