@@ -19,10 +19,10 @@ public class Connect4Test {
   @Test
   public void testBoardSize() {
     assertThrows(InvalidBoardString.class, () -> {
-      new Connect4(3, 3);
+      new Connect4((byte)3, (byte)3);
     });
     assertThrows(InvalidBoardString.class, () -> {
-      new Connect4(3, 3, true);
+      new Connect4((byte)3, (byte)3, true);
     });
     assertThrows(InvalidBoardString.class, () -> {
       new Connect4("eeeeeeee");

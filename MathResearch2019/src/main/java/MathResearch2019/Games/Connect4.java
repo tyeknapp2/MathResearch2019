@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.google.gson.JsonObject;
 
+import MathResearch2019.Errors.InvalidBoardString;
 import MathResearch2019.Errors.TurnMismatchError;
 
 /**
@@ -15,16 +16,31 @@ public class Connect4 implements Game {
   private boolean isCyclic;
   private final char PLAYER_2 = 'B';
   private final char PLAYER_1 = 'R';
+  private byte rows;
+  private byte cols;
   private boolean victoryStatus;
   private boolean stalemateStatus;
 
-  public Connect4(int i, int j) {
+  public Connect4(byte i, byte j) throws InvalidBoardString {
+    if (i < 4 && j < 4)
+      throw new InvalidBoardString("Board too small");
+    
+    for (int g = 0; g < i; g++) {
+      for (int h = 0; h < j; h++)
+        board += "e";
+    }
+    rows = i;
+    cols = j;
+    isCyclic = false;
+    victoryStatus = false;
+    stalemateStatus = false;
   }
 
   public Connect4(int i, int j, boolean b) {
   }
 
   public Connect4(String string, int rows, int cols) {
+
   }
 
   public Connect4(String string, boolean b) {
