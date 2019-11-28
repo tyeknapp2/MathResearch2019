@@ -106,15 +106,6 @@ public class TicTacToeNxN implements Game {
     return false;
   }
 
-  private char[][] convertBoardStringToBoardArr() {
-    char[][] arrBoard = new char[boardSize][boardSize];
-    int index = 0;
-    for (int i = 0; i < boardSize; i++)
-      for (int j = 0; j < boardSize; j++)
-        arrBoard[i][j] = board.charAt(index++);
-    return arrBoard;
-  }
-
   @Override
   public boolean checkStalemateStatus() {
 
