@@ -3081,7 +3081,8 @@ public class Connect4Test {
   public void testPossMovesArrSize(String board, int rows, int cols, int targetSize) {
     try {
       Connect4 connect4 = new Connect4(board, (byte) rows, (byte) cols);
-      assertTrue(connect4.possibleMoves('R').size() == targetSize);
+      assertTrue("" + board + "," + rows + "," + cols + "," + targetSize,
+          connect4.possibleMoves('R').size() == targetSize);
     } catch (Exception e) {
       System.err.println(e.getMessage());
       e.printStackTrace();
