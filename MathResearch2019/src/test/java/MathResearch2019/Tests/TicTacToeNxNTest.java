@@ -197,7 +197,6 @@ public class TicTacToeNxNTest {
     }
   }
 
-  
   @ParameterizedTest(name = "{index} => board= {0} number= {1}")
   @CsvSource({ "eeeeee0Xe,7", "eOXXXXXOe,2", "XXXeOOOeO,2", "eeOeOeOXX,0", "OOXOOXXXe,1", "XeOOOXXeX,2", "eOeeXOXXX,3",
       "XeOeXXeOX,3", "XeOOOeeXO,3", "eeeOOOOeX,4", "eeXXXeOeO,4", "OOXOOOOXe,1", "OXeeeXXee,5", "XOeeOeOOe,0",

@@ -19,13 +19,13 @@ public class Connect4Test {
   @Test
   public void testBoardSize() {
     assertThrows(InvalidBoardString.class, () -> {
-      new Connect4((byte)3, (byte)3);
+      new Connect4((byte) 3, (byte) 3);
     });
     assertThrows(InvalidBoardString.class, () -> {
-      new Connect4((byte)3, (byte)3, true);
+      new Connect4((byte) 3, (byte) 3, true);
     });
     assertThrows(InvalidBoardString.class, () -> {
-      new Connect4("eeeeeeee");
+      new Connect4("eeeeeeee", (byte) 3, (byte) 4);
     });
     assertThrows(InvalidBoardString.class, () -> {
       new Connect4("eeeeeeee", true);
@@ -35,24 +35,24 @@ public class Connect4Test {
   @Test
   public void testPossMoves() {
     try {
-      Connect4 connect4 = new Connect4("eeeeeeeeeeee", 3, 4);
-      connect4.possibleMoves('R').contains(new Connect4("eeeeeeeeeeeR", 3, 4));
-      connect4.possibleMoves('R').contains(new Connect4("eeeeeeeeeeRe", 3, 4));
-      connect4.possibleMoves('R').contains(new Connect4("eeeeeeeeeRee", 3, 4));
-      connect4.possibleMoves('R').contains(new Connect4("eeeeeeeeReee", 3, 4));
-      connect4.possibleMoves('B').contains(new Connect4("eeeeeeeeeeeB", 3, 4));
-      connect4.possibleMoves('B').contains(new Connect4("eeeeeeeeeeBe", 3, 4));
-      connect4.possibleMoves('B').contains(new Connect4("eeeeeeeeeBee", 3, 4));
-      connect4.possibleMoves('B').contains(new Connect4("eeeeeeeeBeee", 3, 4));
-      connect4 = new Connect4("eeeeeeeeRBeR", 3, 4);
-      connect4.possibleMoves('R').contains(new Connect4("eeeeeeeRRBeR", 3, 4));
-      connect4.possibleMoves('R').contains(new Connect4("eeeeeeeeRBRR", 3, 4));
-      connect4.possibleMoves('R').contains(new Connect4("eeeeeReeRBeR", 3, 4));
-      connect4.possibleMoves('R').contains(new Connect4("eeeeReeeRBeR", 3, 4));
-      connect4.possibleMoves('B').contains(new Connect4("eeeeeeeBRBeR", 3, 4));
-      connect4.possibleMoves('B').contains(new Connect4("eeeeeeeeRBBR", 3, 4));
-      connect4.possibleMoves('B').contains(new Connect4("eeeeeBeeRBeR", 3, 4));
-      connect4.possibleMoves('B').contains(new Connect4("eeeeBeeeRBeR", 3, 4));
+      Connect4 connect4 = new Connect4("eeeeeeeeeeee", (byte)3, (byte)4);
+      connect4.possibleMoves('R').contains(new Connect4("eeeeeeeeeeeR", (byte)3, (byte)4));
+      connect4.possibleMoves('R').contains(new Connect4("eeeeeeeeeeRe", (byte)3, (byte)4));
+      connect4.possibleMoves('R').contains(new Connect4("eeeeeeeeeRee", (byte)3, (byte)4));
+      connect4.possibleMoves('R').contains(new Connect4("eeeeeeeeReee", (byte)3, (byte)4));
+      connect4.possibleMoves('B').contains(new Connect4("eeeeeeeeeeeB", (byte)3, (byte)4));
+      connect4.possibleMoves('B').contains(new Connect4("eeeeeeeeeeBe", (byte)3, (byte)4));
+      connect4.possibleMoves('B').contains(new Connect4("eeeeeeeeeBee", (byte)3, (byte)4));
+      connect4.possibleMoves('B').contains(new Connect4("eeeeeeeeBeee", (byte)3, (byte)4));
+      connect4 = new Connect4("eeeeeeeeRBeR", (byte)3, (byte)4);
+      connect4.possibleMoves('R').contains(new Connect4("eeeeeeeRRBeR", (byte)3, (byte)4));
+      connect4.possibleMoves('R').contains(new Connect4("eeeeeeeeRBRR", (byte)3, (byte)4));
+      connect4.possibleMoves('R').contains(new Connect4("eeeeeReeRBeR", (byte)3, (byte)4));
+      connect4.possibleMoves('R').contains(new Connect4("eeeeReeeRBeR", (byte)3, (byte)4));
+      connect4.possibleMoves('B').contains(new Connect4("eeeeeeeBRBeR", (byte)3, (byte)4));
+      connect4.possibleMoves('B').contains(new Connect4("eeeeeeeeRBBR", (byte)3, (byte)4));
+      connect4.possibleMoves('B').contains(new Connect4("eeeeeBeeRBeR", (byte)3, (byte)4));
+      connect4.possibleMoves('B').contains(new Connect4("eeeeBeeeRBeR", (byte)3, (byte)4));
     } catch (TurnMismatchError | InvalidBoardString e) {
       e.printStackTrace();
     }
@@ -1562,9 +1562,10 @@ public class Connect4Test {
       "eeeeeeeeeeeeeeeBeeeeeeBeeeeBeBeeReRRBRRRBR,6,7,0" })
   public void testPossMovesArrSize(String board, int rows, int cols, int targetSize) {
     try {
-      Connect4 connect4 = new Connect4(board,rows,cols);
+      Connect4 connect4 = new Connect4(board, (byte)rows, (byte) cols);
       assertTrue(connect4.possibleMoves('R').size() == targetSize);
     } catch (Exception e) {
+      System.err.println(e.getMessage());
       e.printStackTrace();
     }
 

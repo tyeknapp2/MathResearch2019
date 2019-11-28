@@ -7,6 +7,8 @@ import com.google.gson.JsonObject;
 import MathResearch2019.Errors.InvalidBoardString;
 import MathResearch2019.Errors.TurnMismatchError;
 
+import java.util.regex.*;
+
 /**
  * Connect4
  */
@@ -21,9 +23,9 @@ public class Connect4 implements Game {
   private boolean victoryStatus;
   private boolean stalemateStatus;
 
-  public Connect4(){
-    byte i=4;
-    byte j=4;
+  public Connect4() {
+    byte i = 4;
+    byte j = 4;
     rows = i;
     cols = j;
     for (int g = 0; g < i; g++) {
@@ -38,7 +40,7 @@ public class Connect4 implements Game {
   public Connect4(byte i, byte j) throws InvalidBoardString {
     if (i < 4 && j < 4)
       throw new InvalidBoardString("Board too small");
-    
+
     for (int g = 0; g < i; g++) {
       for (int h = 0; h < j; h++)
         board += "e";
@@ -53,22 +55,29 @@ public class Connect4 implements Game {
   public Connect4(byte i, byte j, boolean b) throws InvalidBoardString {
     if (i < 4 && j < 4)
       throw new InvalidBoardString("Board too small");
-      for (int g = 0; g < i; g++) {
-        for (int h = 0; h < j; h++)
-          board += "e";
-      }
-      rows = i;
-      cols = j;
-      isCyclic = b;
-      victoryStatus = false;
-      stalemateStatus = false;
+    for (int g = 0; g < i; g++) {
+      for (int h = 0; h < j; h++)
+        board += "e";
+    }
+    rows = i;
+    cols = j;
+    isCyclic = b;
+    victoryStatus = false;
+    stalemateStatus = false;
   }
 
-  public Connect4(String string, int rows, int cols) {
-
+  public Connect4(String string, byte r, byte c) throws InvalidBoardString {
+    if (string.length() != (int) r * (int) c) {
+      throw new InvalidBoardString("Input String and size don't match");
+    }
+    board = string;
+    rows = r;
+    cols = c;
+    isCyclic=false;
+    checkVictory();
   }
 
-  public Connect4(String string, boolean b) {
+  public Connect4(String string, byte r, byte c, boolean b) {
   }
 
   @Override
