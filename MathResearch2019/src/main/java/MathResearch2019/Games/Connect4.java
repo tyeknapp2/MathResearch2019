@@ -38,7 +38,7 @@ public class Connect4 implements Game {
 
   @Override
   public boolean checkStalemateStatus() {
-    stalemateStatus = board.contains("e");
+    stalemateStatus = !board.contains("e");
     return stalemateStatus;
   }
 
@@ -106,7 +106,7 @@ public class Connect4 implements Game {
     return isCyclic;
   }
 
-  //For c4Test possMoves and testVictory/stalemate
+  // For c4Test possMoves and testVictory/stalemate
   public static void printC4Boards(int numBoards) {
     for (int i = 0; i < numBoards; i++) {
       ArrayList<Character> col1Stack = new ArrayList<Character>(), col2Stack = new ArrayList<Character>(),
@@ -276,16 +276,16 @@ public class Connect4 implements Game {
           col7Stack.add('e');
         }
 
-        
       }
 
-      if(Math.abs(rCount-bCount)<=1){
-        String board="";
-        for(int j=5;j>=0;j--){
-          board+=col1Stack.get(j)+""+col2Stack.get(j)+col3Stack.get(j)+col4Stack.get(j)+col5Stack.get(j)+col6Stack.get(j)+col7Stack.get(j);
+      if (Math.abs(rCount - bCount) <= 1) {
+        String board = "";
+        for (int j = 5; j >= 0; j--) {
+          board += col1Stack.get(j) + "" + col2Stack.get(j) + col3Stack.get(j) + col4Stack.get(j) + col5Stack.get(j)
+              + col6Stack.get(j) + col7Stack.get(j);
         }
-        System.out.println("\""+board+",6,7,"+((victory)?0:numMoves)+"\",");
-      }else{
+        System.out.println("\"" + board + ",6,7," + ((victory) ? 0 : numMoves) + "\",");
+      } else {
         i--;
       }
     }
