@@ -24,7 +24,7 @@ public class Connect4 implements Game {
   public Connect4(int i, int j, boolean b) {
   }
 
-  public Connect4(String string) {
+  public Connect4(String string, int rows, int cols) {
   }
 
   public Connect4(String string, boolean b) {
@@ -104,6 +104,192 @@ public class Connect4 implements Game {
 
   private boolean getCyclic() {
     return isCyclic;
+  }
+
+  //For c4Test possMoves and testVictory/stalemate
+  public static void printC4Boards(int numBoards) {
+    for (int i = 0; i < numBoards; i++) {
+      ArrayList<Character> col1Stack = new ArrayList<Character>(), col2Stack = new ArrayList<Character>(),
+          col3Stack = new ArrayList<Character>(), col4Stack = new ArrayList<Character>(),
+          col5Stack = new ArrayList<Character>(), col6Stack = new ArrayList<Character>(),
+          col7Stack = new ArrayList<Character>();
+      boolean col1 = true, col2 = true, col3 = true, col4 = true, col5 = true, col6 = true, col7 = true,
+          victory = false;
+      double col1d = Math.random() * .4 + .6, col2d = Math.random() * .4 + .6, col3d = Math.random() * .4 + .6,
+          col4d = Math.random() * .4 + .6, col5d = Math.random() * .4 + .6, col6d = Math.random() * .4 + .6,
+          col7d = Math.random() * .4 + .6;
+      int rCount = (6 * 7) / 2, bCount = (6 * 7) / 2, numMoves = 0;
+      for (int j = 0; j < 6; j++) {
+        numMoves = 0;
+        if (!victory) {
+          String row = "";
+          if (col1 && !victory) {
+            col1Stack.add((bCount > 0)
+                ? ((rCount > 0) ? ((Math.random() < (double) rCount / (double) (rCount + bCount)) ? 'R' : 'B') : 'B')
+                : 'R');
+            rCount += (col1Stack.get(j) == 'R') ? -1 : 0;
+            bCount += (col1Stack.get(j) == 'B') ? -1 : 0;
+            row += "" + col1Stack.get(j);
+            if (j >= 3) {
+              victory = col1Stack.get(j) == col1Stack.get(j - 1) && col1Stack.get(j) == col1Stack.get(j - 2)
+                  && col1Stack.get(j) == col1Stack.get(j - 3);
+              victory = victory || col1Stack.get(j) == col2Stack.get(j - 1) && col1Stack.get(j) == col3Stack.get(j - 2)
+                  && col1Stack.get(j) == col4Stack.get(j - 3);
+            }
+            col1 = !(Math.random() > col1d);
+          } else {
+            col1Stack.add('e');
+            numMoves++;
+            row += "" + col1Stack.get(j);
+          }
+          victory = victory || row.contains("RRRR") || row.contains("BBBB");
+          if (col2 && !victory) {
+            col2Stack.add((bCount > 0)
+                ? ((rCount > 0) ? ((Math.random() < (double) rCount / (double) (rCount + bCount)) ? 'R' : 'B') : 'B')
+                : 'R');
+            rCount += (col2Stack.get(j) == 'R') ? -1 : 0;
+            bCount += (col2Stack.get(j) == 'B') ? -1 : 0;
+            row += "" + col2Stack.get(j);
+            if (j >= 3) {
+              victory = col2Stack.get(j) == col2Stack.get(j - 1) && col2Stack.get(j) == col2Stack.get(j - 2)
+                  && col2Stack.get(j) == col2Stack.get(j - 3);
+              victory = victory || col2Stack.get(j) == col3Stack.get(j - 1) && col2Stack.get(j) == col4Stack.get(j - 2)
+                  && col2Stack.get(j) == col5Stack.get(j - 3);
+            }
+            col2 = !(Math.random() > col2d);
+          } else {
+            col2Stack.add('e');
+            numMoves++;
+            row += "" + col2Stack.get(j);
+          }
+          victory = victory || row.contains("RRRR") || row.contains("BBBB");
+          if (col3 && !victory) {
+            col3Stack.add((bCount > 0)
+                ? ((rCount > 0) ? ((Math.random() < (double) rCount / (double) (rCount + bCount)) ? 'R' : 'B') : 'B')
+                : 'R');
+            rCount += (col3Stack.get(j) == 'R') ? -1 : 0;
+            bCount += (col3Stack.get(j) == 'B') ? -1 : 0;
+            row += "" + col3Stack.get(j);
+            if (j >= 3) {
+              victory = col3Stack.get(j) == col3Stack.get(j - 1) && col3Stack.get(j) == col3Stack.get(j - 2)
+                  && col3Stack.get(j) == col3Stack.get(j - 3);
+              victory = victory || col3Stack.get(j) == col4Stack.get(j - 1) && col3Stack.get(j) == col5Stack.get(j - 2)
+                  && col3Stack.get(j) == col6Stack.get(j - 3);
+            }
+            col3 = !(Math.random() > col3d);
+          } else {
+            col3Stack.add('e');
+            numMoves++;
+            row += "" + col3Stack.get(j);
+          }
+          victory = victory || row.contains("RRRR") || row.contains("BBBB");
+          if (col4 && !victory) {
+            col4Stack.add((bCount > 0)
+                ? ((rCount > 0) ? ((Math.random() < (double) rCount / (double) (rCount + bCount)) ? 'R' : 'B') : 'B')
+                : 'R');
+            rCount += (col4Stack.get(j) == 'R') ? -1 : 0;
+            bCount += (col4Stack.get(j) == 'B') ? -1 : 0;
+            row += "" + col4Stack.get(j);
+            if (j >= 3) {
+              victory = col4Stack.get(j) == col4Stack.get(j - 1) && col4Stack.get(j) == col4Stack.get(j - 2)
+                  && col4Stack.get(j) == col4Stack.get(j - 3);
+              victory = victory || col4Stack.get(j) == col5Stack.get(j - 1) && col4Stack.get(j) == col6Stack.get(j - 2)
+                  && col4Stack.get(j) == col7Stack.get(j - 3);
+              victory = victory || col4Stack.get(j) == col3Stack.get(j - 1) && col4Stack.get(j) == col2Stack.get(j - 2)
+                  && col4Stack.get(j) == col1Stack.get(j - 3);
+            }
+            col4 = !(Math.random() > col4d);
+          } else {
+            col4Stack.add('e');
+            numMoves++;
+            row += "" + col4Stack.get(j);
+          }
+          victory = victory || row.contains("RRRR") || row.contains("BBBB");
+          if (col5 && !victory) {
+            col5Stack.add((bCount > 0)
+                ? ((rCount > 0) ? ((Math.random() < (double) rCount / (double) (rCount + bCount)) ? 'R' : 'B') : 'B')
+                : 'R');
+            rCount += (col5Stack.get(j) == 'R') ? -1 : 0;
+            bCount += (col5Stack.get(j) == 'B') ? -1 : 0;
+            row += "" + col5Stack.get(j);
+            if (j >= 3) {
+              victory = col5Stack.get(j) == col5Stack.get(j - 1) && col5Stack.get(j) == col5Stack.get(j - 2)
+                  && col5Stack.get(j) == col5Stack.get(j - 3);
+              victory = victory || col5Stack.get(j) == col4Stack.get(j - 1) && col5Stack.get(j) == col3Stack.get(j - 2)
+                  && col5Stack.get(j) == col2Stack.get(j - 3);
+            }
+            col5 = !(Math.random() > col5d);
+          } else {
+            col5Stack.add('e');
+            numMoves++;
+            row += "" + col5Stack.get(j);
+          }
+          victory = victory || row.contains("RRRR") || row.contains("BBBB");
+          if (col6 && !victory) {
+            col6Stack.add((bCount > 0)
+                ? ((rCount > 0) ? ((Math.random() < (double) rCount / (double) (rCount + bCount)) ? 'R' : 'B') : 'B')
+                : 'R');
+            rCount += (col6Stack.get(j) == 'R') ? -1 : 0;
+            bCount += (col6Stack.get(j) == 'B') ? -1 : 0;
+            row += "" + col6Stack.get(j);
+            if (j >= 3) {
+              victory = col6Stack.get(j) == col6Stack.get(j - 1) && col6Stack.get(j) == col6Stack.get(j - 2)
+                  && col6Stack.get(j) == col6Stack.get(j - 3);
+              victory = victory || col6Stack.get(j) == col5Stack.get(j - 1) && col6Stack.get(j) == col4Stack.get(j - 2)
+                  && col6Stack.get(j) == col3Stack.get(j - 3);
+            }
+            col6 = !(Math.random() > col6d);
+          } else {
+            col6Stack.add('e');
+            numMoves++;
+            row += "" + col6Stack.get(j);
+          }
+          victory = victory || row.contains("RRRR") || row.contains("BBBB");
+          if (col7 && !victory) {
+            col7Stack.add((bCount > 0)
+                ? ((rCount > 0) ? ((Math.random() < (double) rCount / (double) (rCount + bCount)) ? 'R' : 'B') : 'B')
+                : 'R');
+            rCount += (col7Stack.get(j) == 'R') ? -1 : 0;
+            bCount += (col7Stack.get(j) == 'B') ? -1 : 0;
+            row += "" + col7Stack.get(j);
+            if (j >= 3) {
+              victory = col7Stack.get(j) == col7Stack.get(j - 1) && col7Stack.get(j) == col7Stack.get(j - 2)
+                  && col7Stack.get(j) == col7Stack.get(j - 3);
+              victory = victory || col7Stack.get(j) == col6Stack.get(j - 1) && col7Stack.get(j) == col5Stack.get(j - 2)
+                  && col7Stack.get(j) == col4Stack.get(j - 3);
+            }
+            col7 = !(Math.random() > col7d);
+          } else {
+            col7Stack.add('e');
+            numMoves++;
+            row += "" + col7Stack.get(j);
+          }
+          victory = victory || row.contains("RRRR") || row.contains("BBBB");
+        } else {
+          numMoves = 0;
+          col1Stack.add('e');
+          col2Stack.add('e');
+          col3Stack.add('e');
+          col4Stack.add('e');
+          col5Stack.add('e');
+          col6Stack.add('e');
+          col7Stack.add('e');
+        }
+
+        
+      }
+
+      if(Math.abs(rCount-bCount)<=1){
+        String board="";
+        for(int j=5;j>=0;j--){
+          board+=col1Stack.get(j)+""+col2Stack.get(j)+col3Stack.get(j)+col4Stack.get(j)+col5Stack.get(j)+col6Stack.get(j)+col7Stack.get(j);
+        }
+        System.out.println("\""+board+",6,7,"+((victory)?0:numMoves)+"\",");
+      }else{
+        i--;
+      }
+    }
+
   }
 
 }
