@@ -86,16 +86,18 @@ public class TicTacToeNxN implements Game {
         + "}|(?<fslash>x|o)(.{" + (boardSize + 1) + "}\\k<fslash>){" + (boardSize - 1) + "}"
         + (boardSize >= 4
             ? "|(?<sqr>x|o)\\k<sqr>.{" + (boardSize - 1) + "}\\k<sqr>\\k<sqr>|(?<crn>x|o).{" + (boardSize - 2)
-                + "}\\k<crn>.{11}\\k<crn>.{" + (boardSize - 2) + "}\\k<crn>"
+                + "}\\k<crn>.{" + ((boardSize + 1) * (boardSize - 2) + 1) + "}\\k<crn>.{" + (boardSize - 2)
+                + "}\\k<crn>"
             : "");
-    Pattern p = Pattern.compile(regexString);
+    Pattern p = Pattern.compile(regexString, Pattern.DOTALL | Pattern.CASE_INSENSITIVE);
     Matcher m = p.matcher(tempBoard);
     victoryStatus = m.find();
 
     /**
      * If no victory condition is met, it checks for a stalemate.
      */
-    checkStalemateStatus();
+    if (!victoryStatus)
+      checkStalemateStatus();
     /**
      * Finally, it sets this board's victoryStatus.
      * 
@@ -115,7 +117,7 @@ public class TicTacToeNxN implements Game {
 
   @Override
   public boolean checkStalemateStatus() {
-    // checks to see
+
     if (board.contains("e"))
       return false;
 
