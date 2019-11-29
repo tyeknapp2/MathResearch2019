@@ -8,7 +8,8 @@ import java.util.ArrayList;
 import com.google.gson.JsonObject;
 
 import MathResearch2019.Errors.InvalidBoardString;
-import java.util.regex.*;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
 /**
  * @author TyeKnappenberger
