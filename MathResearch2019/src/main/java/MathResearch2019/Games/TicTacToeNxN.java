@@ -81,6 +81,7 @@ public class TicTacToeNxN implements Game {
     for (int r = 0; r < boardSize; r++) {
       tempBoard += board.substring(r * boardSize, r * boardSize + boardSize) + "\n";
     }
+    tempBoard = tempBoard.trim();
     String regexString = "(x{" + boardSize + "}|o{" + boardSize + "})|(?<col>x|o)(.{" + boardSize + "}\\k<col>){"
         + (boardSize - 1) + "}|(?<bslash>x|o)(.{" + (boardSize - 1) + "}\\k<bslash>){" + (boardSize - 1)
         + "}|(?<fslash>x|o)(.{" + (boardSize + 1) + "}\\k<fslash>){" + (boardSize - 1) + "}"
