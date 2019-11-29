@@ -14,5 +14,3 @@ jobs:
           java-version: 1.8
       - name: Build with Maven
         run: cd MathResearch2019; ./mvnw -B package --file pom.xml
-      - name: Test with Maven
-        run: cd MathResearch2019; ./mvnw clean test
