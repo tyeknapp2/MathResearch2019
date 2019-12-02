@@ -23,9 +23,9 @@ public class TicTacToeNxN implements Game {
 
   private boolean stalemateStatus;
 
-  public final char PLAYER_1 = 'O';
+  public final static char PLAYER_1 = 'O';
 
-  public final char PLAYER_2 = 'X';
+  public final static char PLAYER_2 = 'X';
 
   private int boardSize;
 

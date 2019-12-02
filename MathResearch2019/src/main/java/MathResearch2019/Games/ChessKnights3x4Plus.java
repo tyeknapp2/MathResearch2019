@@ -16,8 +16,8 @@ public class ChessKnights3x4Plus implements Game {
   private boolean victoryStatus;
   private String board;
   private char toMove;
-  public final char PLAYER_1 = 'W';
-  public final char PLAYER_2 = 'B';
+  public final static char PLAYER_1 = 'W';
+  public final static char PLAYER_2 = 'B';
 
   public ChessKnights3x4Plus(String g) {
     board = g.substring(0, 12);

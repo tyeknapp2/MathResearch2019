@@ -16,8 +16,8 @@ public class Connect4 implements Game {
 
   private String board;
   private boolean isCyclic;
-  private final char PLAYER_2 = 'B';
-  private final char PLAYER_1 = 'R';
+  private final static char PLAYER_2 = 'B';
+  private final static char PLAYER_1 = 'R';
   private byte rows;
   private byte cols;
   private boolean victoryStatus;

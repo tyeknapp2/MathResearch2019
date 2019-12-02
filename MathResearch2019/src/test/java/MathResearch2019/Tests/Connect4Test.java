@@ -1577,7 +1577,7 @@ public class Connect4Test {
   }
 
   @ParameterizedTest
-  @CsvSource({ "RBRBRBRBRBRB,3,4,0", "eBRBRBRBRBRB,3,4,1", "BReeeBeBBeeeBeRBeeBBeBBeRRReRReRRBRRBRBBRR,6,7,4",
+  @CsvSource({ "eeeeeeeeeeeeeeee,4,4,4","RBRBRBRBRBRB,3,4,0", "eBRBRBRBRBRB,3,4,1", "BReeeBeBBeeeBeRBeeBBeBBeRRReRReRRBRRBRBBRR,6,7,4",
       "eeeeeeeeeeeeeeBeBReeeReRRReBBBBRReBBBRRBBR,6,7,0", "eeeeeeeeeeeeeeBReeeeeBReRRReRReBRBeBRBRBBB,6,7,0",
       "eeeeeRReeeeeRBeeeeeBBeeeeeRReBeReBBRRBRBRB,6,7,5", "eeeeBBeeBeBRBeeReRBReRReRRBBRRBBRBRBBBRRRB,6,7,5",
       "eeReReeeeBeBeeeeReReeeRReBeeRBBeBeRBRBRBBB,6,7,5", "ReeeeeeReBeeeBBeReBeRReBeBeBReBeBeRRBRBRRB,6,7,6",
