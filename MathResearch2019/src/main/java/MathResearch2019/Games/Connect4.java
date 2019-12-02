@@ -40,7 +40,7 @@ public class Connect4 implements Game {
   public Connect4(byte i, byte j) throws InvalidBoardString {
     if (i < 4 && j < 4)
       throw new InvalidBoardString("Board too small");
-
+    board = "";
     for (int g = 0; g < i; g++) {
       for (int h = 0; h < j; h++)
         board += "e";
